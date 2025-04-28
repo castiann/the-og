@@ -1,7 +1,7 @@
 # [the-og](https://github.com/castiann/the-og)
 Created by [Ian Castellano](https://orcid.org/0009-0006-0104-6045) and [Benne Holwerda](https://orcid.org/0000-0002-4884-6756).
 
-This program is used to map dust attenuation of galaxies using the overlapping galaxy technique. The methods used are the rotation method and the isophotal method, as demonstrated by [Benne Holwerda 2009](https://ui.adsabs.harvard.edu/abs/2009AJ....137.3000H/abstract).
+This program is used to map dust attenuation of galaxies using the overlapping galaxy technique. The methods used are the rotation method and the isophotal method, as demonstrated in [Benne Holwerda 2009](https://ui.adsabs.harvard.edu/abs/2009AJ....137.3000H/abstract).
 
 ## Using the Program
 This project was created using Python 3.12.3.
