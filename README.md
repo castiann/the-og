@@ -13,4 +13,4 @@ In the first python cell, you will specify the path to the data location and the
 ## File Structure
 - Project notebooks must be in the main directory the-og. For example, `the-og/ic_720_rotate.ipynb`.
 - Data should be kept in subdirectories. For example, `the-og/mw_compare_data/ic720.fits`.
-- Results and exports will be sent to subdirectories. For example, `the-og/ic_720_output/ic_720_transmission_single.png`. Create this directory before running the code.
+- Results and exports will be sent to subdirectories. For example, `the-og/ic_720_output`. Create this directory before running the code.
