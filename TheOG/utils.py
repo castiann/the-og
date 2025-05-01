@@ -63,7 +63,7 @@ warnings.simplefilter('ignore', category=AstropyWarning)
 
 @contextmanager
 def suppress_stdout():
-    """function to supress print ( I don't think I ended up using this?)"""
+    """function to supress print""" # I don't think I ended up using this?
     with open(os.devnull, "w") as devnull:
         old_stdout = sys.stdout
         sys.stdout = devnull
@@ -89,7 +89,7 @@ def quick_open(data, sci=0, plot=True):
     prihdr0 = hdulist0[sci].header
     image_data0 = hdulist0[sci].data
 
-    # find if the data is 2D or 3D. If 3D, work with the zero index of the image data
+    # find if the data is 2D or 3D. If 3D, work with the zero index of the image data (the 2D portion)
     if len(image_data0.shape) > 2:
         print('image data is 3D, using 2D axis')
         image_data0 = image_data0[0]
@@ -107,7 +107,7 @@ def quick_open(data, sci=0, plot=True):
 
 def quick_plot(data, name='Plot'):
     """
-    Quickly plots a data array with both the raw and ZScaled data.
+    Quickly plots a data array with raw, asinh, and ZScale.
 
     Parameters:
         data (numpy array): image data array (called image_data0 or image_data elsewhere).
@@ -143,7 +143,8 @@ def create_working_file(path, file, pos, size, cutout=False, sci=0):
     Parameters:
         path (string): Path from the project to original .fits file.
         file (string): Path from the project to the working and save location.
-    Return:
+    Returns:
+        hdulist, image_data, prihdr: hdu object, data, and header of created file.
     """
     # opens data
     hdulist0, image_data0, prihdr0 = quick_open(path, sci, plot=False)
@@ -342,8 +343,6 @@ def readregion(regfile):
 
 
 def save_cutout(originalfile, cutout, outfile, science=0):
-    # Note: There is also a save_cutout_2 function
-
     # Load the image and the WCS of the original image
     hdu = fits.open(originalfile)[science] #input science as the index of the image to look at
     wcs = WCS(hdu.header)
@@ -359,9 +358,7 @@ def save_cutout(originalfile, cutout, outfile, science=0):
 
 
 def normalize(arr, t_min=0, t_max=1):
-    """
-    Normalizes an array. Used in apply_mask.
-    """
+    """Normalizes an array. Used in apply_mask."""
     norm_arr = []
     diff = t_max - t_min
     imin,imax = np.min(arr), np.max(arr)
@@ -373,9 +370,7 @@ def normalize(arr, t_min=0, t_max=1):
 
 
 def make_ellipse_mask(data,aper):
-    """
-    Make a mask of an ellipse in the data (from original code)
-    """
+    """Make a mask of an ellipse in the data.""" # from the original version of code
     (x0,y0,a,b,pa) = aper
 
     theta = Angle(pa, 'deg')
