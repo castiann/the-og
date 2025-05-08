@@ -6,7 +6,7 @@ This program is used to map dust attenuation of galaxies using the overlapping g
 ## Using the Program
 This project was created using Python 3.12.3.
 
-To start the program, I recommend first looking at the example notebook provided using the rotation method on IC 720 (`ic_720_rotate.ipynb`) and following along with the [documentation file](./documentation). These files guide you through the steps of opening and analyzing the overlapping galaxy pair. The files can then be duplicated to use as a template. Note: as of the current version of this project, the isophotal method on IC 720 (`ic720_isophote.ipynb`) is currently still a work in progress, and will be updated with a newer release.
+To start the program, I recommend first looking at the example notebook provided using the rotation method on IC 720 (`ic_720_rotate.ipynb`) and following along with the [documentation file](./documentation.md). These files guide you through the steps of opening and analyzing the overlapping galaxy pair. The files can then be duplicated to use as a template. Note: as of the current version of this project, the isophotal method on IC 720 (`ic720_isophote.ipynb`) is currently still a work in progress, and will be updated with a newer release.
 
 In the first python cell, you will specify the path to the data location and the export location, and give the data set nickname.
 
