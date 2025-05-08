@@ -1,7 +1,0 @@
-# Region file format: DS9 version 4.1
-global color=green dashlist=8 3 width=1 font="helvetica 10 normal roman" select=1 highlite=1 dash=0 fixed=0 edit=1 move=1 delete=1 include=1 source=1
-image
-point(981.40924,835.05118) # point=x 15 color=red text={BG center}
-point(1038.2624,1144.9215) # point=cross 15 color=blue text={FG center}
-ellipse(1042.2253,1145.9106,15.583496,21.394937,104.60348) # color=blue
-ellipse(981.41331,835.04407,23.413793,32.616843,348.88909) # color=red
