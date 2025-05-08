@@ -149,6 +149,9 @@ def jiggle_and_rotate(data,header, x0, y0, pixrange=10, pixelstep=2, figname='',
         pixrange = int(pixrange/5)
         pixelstep = int(pixrange/5)
 
+    if pixelstep == 0:  # force a minimum pixelstep of 1
+        pixelstep = 1
+
     print(f'pixrange = {pixrange}')
     print(f'pixelstep = {pixelstep}')
 
